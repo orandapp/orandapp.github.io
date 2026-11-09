@@ -2,4 +2,7 @@
 Thumbs.db
 config.php
 .env
-*.sql.bak
+*.apk
+*.jks
+*.keystore
+keystore.properties

@@ -4,7 +4,7 @@
 
 ## فایل‌ها
 - `index.html`: کل سایت. صفحه‌ی اپ‌ها با آدرس‌هایی مثل `#app-eggtimer` و `#privacy-eggtimer` باز می‌شن.
-- `assets/eggtimer-icon.png`: آیکون تخم‌مرغ‌پز
+- `assets/eggtimer-icon.png` و `assets/eggtimer-screenshot.jpg`: آیکون و تصویر تخم‌مرغ‌پز
 - `privacy/eggtimer.html`: صفحه‌ی مستقل حریم خصوصی تخم‌مرغ‌پز (همون فایلی که خودت دادی، بدون تغییر).
   لینک استورها رو به این بده: `https://orandapp.ir/privacy/eggtimer.html`
 - `og.png`، `robots.txt`، `sitemap.xml`: پیش‌نمایش لینک و سئو
@@ -20,6 +20,10 @@
 1. فایلی به اسم `CNAME` بساز که فقط یه خط داره: `orandapp.ir`
 2. رکوردهای DNS رو طبق مستندات رسمی GitHub Pages (بخش custom domain) تنظیم کن.
 3. تو Settings، بعد Pages، دامنه رو وارد کن و HTTPS رو روشن کن.
+
+## لینک دانلود
+دکمه‌ی دانلود صفحه‌ی اپ به این آدرس می‌ره: `https://github.com/orandapp/orandapp.github.io/releases/latest/download/eggtimer.apk`
+پس فایل ریلیز باید دقیقاً `eggtimer.apk` اسم داشته باشه. اگه APK رو دوباره ساختی، عدد SHA-256 تو `index.html` (کلید `sha` توی `APPS`) رو هم عوض کن.
 
 ## وقتی اپ منتشر شد
 - تو `index.html` دنبال `APPS` بگرد. دکمه‌ی «به‌زودی تو استورها» (کلید `store` توی `U`) رو با لینک دانلود واقعی عوض کن، یا بگو من عوضش کنم.

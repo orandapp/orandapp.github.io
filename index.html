@@ -40,24 +40,24 @@ main,footer{position:relative;z-index:1}
 .stage{position:relative;width:100%;max-width:1000px}
 .lw{position:relative;width:min(52vw,250px);margin:0 auto;animation:lift 1.8s cubic-bezier(.2,.7,.2,1) both}
 .logo{width:100%;height:auto;overflow:visible;display:block;margin:0 auto;transition:transform .15s ease-out;filter:drop-shadow(0 30px 60px rgba(77,107,255,.35))}
-.rip{position:absolute;left:81%;top:19%;width:20%;aspect-ratio:1;translate:-50% -50%;border-radius:30%;border:2px solid var(--b);opacity:0;pointer-events:none;animation:rip 1.3s ease-out 1.6s}
-.ring{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.3s cubic-bezier(.65,0,.35,1) .35s forwards}
-.bdg{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .8s cubic-bezier(.2,1.6,.4,1) 1.55s forwards,glow 3s ease-in-out 2.8s infinite}
+.rip{position:absolute;left:81%;top:19%;width:20%;aspect-ratio:1;translate:-50% -50%;border-radius:30%;border:2px solid var(--b);opacity:0;pointer-events:none;animation:rip 1.3s ease-out 1.95s}
+.ring{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.4s cubic-bezier(.65,0,.35,1) .35s forwards}
+.bdg{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .8s cubic-bezier(.2,1.6,.4,1) 1.85s forwards,glow 3s ease-in-out 3.1s infinite}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes pop{from{transform:translate(40px,-40px) scale(0) rotate(-60deg)}to{transform:scale(1)}}
 @keyframes glow{50%{filter:drop-shadow(0 0 28px #4D6BFF)}}
-.halo{position:absolute;left:50%;top:0;width:min(90vw,520px);aspect-ratio:1;translate:-50% -10%;border-radius:50%;border:1px dashed rgba(143,162,255,.25);animation:spin 40s linear infinite,fade 1.4s ease 1.9s both;pointer-events:none}
+.halo{position:absolute;left:50%;top:0;width:min(90vw,520px);aspect-ratio:1;translate:-50% -10%;border-radius:50%;border:1px dashed rgba(143,162,255,.25);animation:spin 40s linear infinite,fade 1.4s ease 2.3s both;pointer-events:none}
 .halo::after{content:"";position:absolute;top:-7px;left:50%;width:14px;height:14px;border-radius:5px;background:var(--b);box-shadow:0 0 24px var(--b)}
 .halo.h2{width:min(120vw,760px);animation-duration:70s,1.8s;animation-direction:reverse,normal;border-color:rgba(247,245,240,.07)}
 @keyframes spin{to{rotate:360deg}}
 h1{font-size:clamp(34px,7.4vw,92px);font-weight:900;line-height:1.35;margin:34px auto 18px;max-width:12em}
-.w{display:inline-block;opacity:0;transform:translateY(40px) rotate(3deg);filter:blur(10px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(2.4s + var(--i)*.13s)}
-.hl{background:linear-gradient(100deg,var(--b),#9CB0FF,var(--b));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:up .9s cubic-bezier(.2,.7,.2,1) forwards,shine 3s linear infinite;animation-delay:calc(2.4s + var(--i)*.13s),4.2s}
+.w{display:inline-block;opacity:0;transform:translateY(40px) rotate(3deg);filter:blur(10px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(2.8s + var(--i)*.13s)}
+.hl{background:linear-gradient(100deg,var(--b),#9CB0FF,var(--b));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:up .9s cubic-bezier(.2,.7,.2,1) forwards,shine 3s linear infinite;animation-delay:calc(2.8s + var(--i)*.13s),4.6s}
 @keyframes up{to{opacity:1;transform:none;filter:none}}
 @keyframes shine{to{background-position:-200% 0}}
-.sub{color:var(--mut);max-width:32em;margin:0 auto 32px;font-size:clamp(15px,2.2vw,20px);opacity:0;animation:up .8s 3.3s forwards}
-.cta{opacity:0;animation:up .8s 3.5s forwards}
-.scroll{position:absolute;bottom:22px;left:50%;width:22px;height:36px;border:1.5px solid var(--mut);border-radius:12px;translate:-50% 0;opacity:.6;animation:fade 1s 4.3s both}
+.sub{color:var(--mut);max-width:32em;margin:0 auto 32px;font-size:clamp(15px,2.2vw,20px);opacity:0;animation:up .8s 3.7s forwards}
+.cta{opacity:0;animation:up .8s 3.9s forwards}
+.scroll{position:absolute;bottom:22px;left:50%;width:22px;height:36px;border:1.5px solid var(--mut);border-radius:12px;translate:-50% 0;opacity:.6;animation:fade 1s 4.7s both}
 .scroll::after{content:"";position:absolute;top:7px;left:50%;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--fg);animation:sc 1.8s ease-in-out infinite}
 @keyframes sc{60%{transform:translateY(12px);opacity:0}}
 /* marquee */
@@ -210,9 +210,9 @@ body::before,body::after,.halo{display:none}
 html nav{background:var(--bg)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
 .grid{animation:fade 1.6s ease both}
 .logo{filter:none}
-.bdg{animation:pop .8s cubic-bezier(.2,1.6,.4,1) 1.55s forwards}
+.bdg{animation:pop .8s cubic-bezier(.2,1.6,.4,1) 1.85s forwards}
 .w{filter:none}
-.hl{animation:up .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(2.4s + var(--i)*.13s)}
+.hl{animation:up .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(2.8s + var(--i)*.13s)}
 .ph{animation:none;box-shadow:none}
 .s2{animation:none}
 }
@@ -251,7 +251,7 @@ html nav{background:var(--bg)!important;backdrop-filter:none!important;-webkit-b
 <div class="grid"></div>
 <div class="stage">
 <div class="halo"></div><div class="halo h2"></div>
-<div class="lw"><svg class="logo" id="logo" viewBox="172 172 680 680" role="img" aria-label="لوگوی اورند"><defs><mask id="m1"><rect x="0" y="0" width="1024" height="1024" fill="#fff"/><rect x="614" y="191" width="220" height="220" rx="78" fill="#000"/></mask></defs><g mask="url(#m1)"><rect class="ring" pathLength="1" x="262" y="301" width="460" height="460" rx="143" fill="none" stroke="#F7F5F0" stroke-width="88"/></g><rect class="bdg" x="642" y="219" width="164" height="164" rx="51" fill="#4D6BFF"/></svg><i class="rip"></i></div>
+<div class="lw"><svg class="logo" id="logo" viewBox="172 172 680 680" role="img" aria-label="لوگوی اورند"><defs><mask id="m1"><rect x="0" y="0" width="1024" height="1024" fill="#fff"/><rect x="614" y="191" width="220" height="220" rx="78" fill="#000"/></mask></defs><g mask="url(#m1)"><path class="ring" pathLength="1" d="M680.1 342.9A143 143 0 0 1 722 444L722 618A143 143 0 0 1 579 761L405 761A143 143 0 0 1 262 618L262 444A143 143 0 0 1 405 301L579 301A143 143 0 0 1 680.1 342.9Z" fill="none" stroke="#F7F5F0" stroke-width="88"/></g><rect class="bdg" x="642" y="219" width="164" height="164" rx="51" fill="#4D6BFF"/></svg><i class="rip"></i></div>
 <h1><span class="w" style="--i:0">حافظه</span> <span class="w" style="--i:1">گوشیتو</span> <span class="w hl" style="--i:2">الکی</span> <span class="w" style="--i:3">پر</span> <span class="w" style="--i:4">نمی‌کنیم.</span></h1>
 <p class="sub">ما اورندیم، یه استودیوی کوچیک که اپ می‌سازه. اپ‌هایی ساده و جمع‌وجور، که با حوصله ساخته شدن.</p>
 <div class="cta"><a class="btn mag" href="#apps">اپ‌ها</a><a class="lnk mag" href="#contact">ارتباط با ما</a></div>
@@ -261,8 +261,6 @@ html nav{background:var(--bg)!important;backdrop-filter:none!important;-webkit-b
 
 
 <section class="sec" id="about">
-<h2 class="rv">اپ‌هایی که دوست داری باز کنی.</h2>
-<p class="p rv" style="--d:.1s;margin-bottom:60px"><span class="fa-only">اورند یعنی زیبایی در سادگی. حرف ما اینه که یه اپ از ساده بودن و ریزه‌کاری‌هاش قشنگ می‌شه، نه از شلوغی.</span><span class="en-only">Orand means beauty in simplicity. Our take: an app looks great because it's simple and well-detailed, not because it's busy.</span></p>
 <p class="man" id="man">ما <span class="k">سبک</span> می‌سازیم، چون گوشی تو خونه‌ته نه انبار. <span class="k">بی‌دردسر</span> می‌سازیم، چون تبلیغ مزاحم نداریم. و <span class="k">با حوصله</span> می‌سازیم، چون هر جزئیات یه تصمیمه.</p>
 </section>
 
@@ -272,8 +270,8 @@ html nav{background:var(--bg)!important;backdrop-filter:none!important;-webkit-b
 <div class="demo rv" style="--d:.15s" id="demo">
 <div class="row"><span>یه اپ شلوغ و پرتبلیغ</span><b id="v1">۱۸۰ مگابایت</b></div>
 <div class="track"><div class="fill f1" data-w="86"></div></div>
-<div class="row"><span>یه اپ اورندی</span><b id="v2">زیر ۱۰۰ مگابایت</b></div>
-<div class="track"><div class="fill f2" data-w="48"></div></div>
+<div class="row"><span>یه اپ اورندی</span><b id="v2">زیر ۵۰ مگابایت</b></div>
+<div class="track"><div class="fill f2" data-w="24"></div></div>
 <p class="note">عددها فقط یه مثال تصویری‌ان، برای نشون دادن فرق رویکرد.</p>
 <button class="btn mag" id="rep" type="button">دوباره نشونم بده</button>
 </div>
@@ -283,7 +281,7 @@ html nav{background:var(--bg)!important;backdrop-filter:none!important;-webkit-b
 <h2 class="rv"><span class="fa-only">اپ‌های اورند</span><span class="en-only">Orand apps</span></h2>
 <p class="p rv" style="--d:.1s"><span class="fa-only">اولین اپ اورند آماده‌ست و می‌تونی دانلودش کنی. روش بزنی، صفحه‌ی خودش باز می‌شه. تو استورها هم به‌زودی می‌یاد.</span><span class="en-only">Orand’s first app is ready and you can download it. Tap it to open its page. It’s coming to the stores soon too.</span></p>
 <div class="phones rv" id="appcards" style="--d:.15s"></div>
-<div class="rv" style="text-align:center;margin-top:46px"><a class="btn mag fa-only" href="mailto:hello@orandapp.ir?subject=%D8%AE%D8%A8%D8%B1%D9%85%20%DA%A9%D9%86">وقتی تو استورها اومد خبرم کن</a><a class="btn mag en-only" href="mailto:hello@orandapp.ir?subject=Tell%20me%20when%20the%20app%20is%20out">Tell me when it’s in the stores</a></div>
+<div class="rv" style="text-align:center;margin-top:46px"><a class="btn mag fa-only" href="mailto:orandapp.ir@gmail.com?subject=%D8%AE%D8%A8%D8%B1%D9%85%20%DA%A9%D9%86">وقتی تو استورها اومد خبرم کن</a><a class="btn mag en-only" href="mailto:orandapp.ir@gmail.com?subject=Tell%20me%20when%20the%20app%20is%20out">Tell me when it’s in the stores</a></div>
 </section>
 
 <section class="sec" id="process">
@@ -322,7 +320,7 @@ html nav{background:var(--bg)!important;backdrop-filter:none!important;-webkit-b
 <a class="lnk mag" href="https://instagram.com/orand_app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>اینستاگرام <bdi dir="ltr">@orand_app</bdi></a>
 <a class="lnk mag" href="https://t.me/orand_app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M21.5 3 2.5 10.5l6 2.2 2 6.3 3-3.6 5 3.6z"/><path d="M8.5 12.7 21.5 3"/></svg>تلگرام <bdi dir="ltr">@orand_app</bdi></a>
 <a class="lnk mag" href="https://github.com/orandapp" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>گیت‌هاب <bdi dir="ltr">orandapp</bdi></a>
-<a class="lnk mag" href="mailto:hello@orandapp.ir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3.5 7.5 8.5 6 8.5-6"/></svg>ایمیل <bdi dir="ltr">hello@orandapp.ir</bdi></a>
+<a class="lnk mag" href="mailto:orandapp.ir@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3.5 7.5 8.5 6 8.5-6"/></svg>ایمیل <bdi dir="ltr">orandapp.ir@gmail.com</bdi></a>
 </div>
 </section>
 <section class="sec pvdoc" id="appview"></section>
@@ -411,8 +409,8 @@ function appPage(a){const l=r.lang==='en'?'en':'fa',t=a[l],en=l==='en',m='mailto
  return '<div class="vw"><a class="lnk bk" href="#apps">'+AR+u('all')+'</a><div class="ap"><div>'+icon(a,'ap-ic')+'<h2>'+t.n+'<span class="tag">'+(a.dl?u('ver')+' '+a.ver:u('soon'))+'</span></h2><p class="p">'+t.t+'</p><p class="p" style="margin-top:14px">'+t.d+'</p><ul class="fl">'+t.f.map(x=>'<li>'+x+'</li>').join('')+'</ul><div class="info"><span>'+u('plat')+'</span><b>'+u('and')+'</b><span>'+u('size')+'</span><b>'+a.size[l]+'</b><span>'+u('ads')+'</span><b>'+u('no')+'</b><span>'+u('net')+'</span><b>'+u('nn')+'</b><span>'+u('acc')+'</span><b>'+u('no')+'</b>'+(a.sha?'<span>SHA-256</span><b dir="ltr" class="hash">'+a.sha+'</b>':'')+'</div><div>'+dl+'<a class="lnk" href="#privacy-'+a.id+'">'+u('priv')+t.n+'</a><a class="lnk" href="'+m+'">'+u('sup')+'</a><a class="lnk" href="'+mf+'">'+u('fb')+'</a></div>'+(a.dl?'<p class="note2">'+u('note')+'</p>':'')+'</div><div class="ap-ph"><img class="shot" src="'+a.shot+'" alt="'+u('shotalt')+'" width="900" height="1600"></div></div>'+chg(a)+'</div>'}
 function appPriv(a){const l=r.lang==='en'?'en':'fa',t=a[l];return doc(t.pv.h,t.pv.meta,'',t.pv.S,'<a class="lnk bk" href="#app-'+a.id+'">'+AR+u('back')+t.n+'</a>')}
 function pvGen(){const en=r.lang==='en',L=APPS.map(a=>'<a href="#privacy-'+a.id+'">'+T(a).n+'</a>').join(en?', ':'، ');
- const S=en?[['What do we collect?',(ANALYTICS.src?'This site has no accounts and no advertising cookies. It only has a visit counter without cookies that shows overall numbers (like page views and countries). It doesn’t identify you personally.':'This site has no accounts, no analytics and no advertising cookies, and it doesn’t collect your personal information.')],['What stays in your browser?','Only two choices: your theme (dark or light) and your language. They stay in your own browser and aren’t sent anywhere.'],['Contact form','When you press Send, your own email app opens with the message ready. Nothing goes anywhere until you send the email yourself, and this site’s server doesn’t store your message. Once you send it, it reaches hello@orandapp.ir and we only use it to reply to you.'],['Outside services','Fonts come from Google Fonts, so your browser connects to Google’s servers to get them. The Instagram, Telegram and GitHub links go to those sites, and they have their own privacy policies. The app file is also downloaded from GitHub.'],['Orand apps','Every app has its own privacy page, on that app’s page: '+L+'.'],['If this changes','We’ll update it here. Questions? Write to hello@orandapp.ir.']]
- :[['چی جمع می‌کنیم؟',(ANALYTICS.src?'این سایت حساب کاربری و کوکی تبلیغاتی نداره. فقط یه شمارنده‌ی بازدید بدون کوکی داره که آمار کلی رو نشون می‌ده (مثل تعداد بازدید و کشور) و تو رو به اسم و شخص نمی‌شناسه.':'این سایت حساب کاربری، آنالیتیکس و کوکی تبلیغاتی نداره و اطلاعات شخصی‌ت رو جمع نمی‌کنه.')],['چی تو مرورگرت می‌مونه؟','فقط دو تا انتخاب: تم (تاریک یا روشن) و زبان. اینا تو مرورگر خودت می‌مونن و جایی فرستاده نمی‌شن.'],['فرم ارتباط','«ارسال» رو که بزنی، برنامه‌ی ایمیلت با پیام آماده باز می‌شه. تا خودت ایمیل رو نفرستی هیچی جایی نمی‌ره و سرور این سایت پیامت رو ذخیره نمی‌کنه. وقتی بفرستی، به hello@orandapp.ir می‌رسه و فقط برای جواب دادن بهت ازش استفاده می‌کنیم.'],['سرویس‌های بیرونی','فونت‌ها از Google Fonts می‌یان، پس مرورگرت برای گرفتنشون به سرورهای گوگل وصل می‌شه. لینک‌های اینستاگرام، تلگرام و گیت‌هاب هم می‌رن سایت خودشون و اونا قوانین حریم خصوصی خودشون رو دارن. فایل اپ هم از گیت‌هاب دانلود می‌شه.'],['اپ‌های اورند','هر اپ صفحه‌ی حریم خصوصی مخصوص خودش رو داره، تو صفحه‌ی همون اپ: '+L+'.'],['اگه این متن عوض شد','همین‌جا به‌روزش می‌کنیم. سوالی بود به hello@orandapp.ir بنویس.']];
+ const S=en?[['What do we collect?',(ANALYTICS.src?'This site has no accounts and no advertising cookies. It only has a visit counter without cookies that shows overall numbers (like page views and countries). It doesn’t identify you personally.':'This site has no accounts, no analytics and no advertising cookies, and it doesn’t collect your personal information.')],['What stays in your browser?','Only two choices: your theme (dark or light) and your language. They stay in your own browser and aren’t sent anywhere.'],['Contact form','When you press Send, your own email app opens with the message ready. Nothing goes anywhere until you send the email yourself, and this site’s server doesn’t store your message. Once you send it, it reaches orandapp.ir@gmail.com and we only use it to reply to you.'],['Outside services','Fonts come from Google Fonts, so your browser connects to Google’s servers to get them. The Instagram, Telegram and GitHub links go to those sites, and they have their own privacy policies. The app file is also downloaded from GitHub.'],['Orand apps','Every app has its own privacy page, on that app’s page: '+L+'.'],['If this changes','We’ll update it here. Questions? Write to orandapp.ir@gmail.com.']]
+ :[['چی جمع می‌کنیم؟',(ANALYTICS.src?'این سایت حساب کاربری و کوکی تبلیغاتی نداره. فقط یه شمارنده‌ی بازدید بدون کوکی داره که آمار کلی رو نشون می‌ده (مثل تعداد بازدید و کشور) و تو رو به اسم و شخص نمی‌شناسه.':'این سایت حساب کاربری، آنالیتیکس و کوکی تبلیغاتی نداره و اطلاعات شخصی‌ت رو جمع نمی‌کنه.')],['چی تو مرورگرت می‌مونه؟','فقط دو تا انتخاب: تم (تاریک یا روشن) و زبان. اینا تو مرورگر خودت می‌مونن و جایی فرستاده نمی‌شن.'],['فرم ارتباط','«ارسال» رو که بزنی، برنامه‌ی ایمیلت با پیام آماده باز می‌شه. تا خودت ایمیل رو نفرستی هیچی جایی نمی‌ره و سرور این سایت پیامت رو ذخیره نمی‌کنه. وقتی بفرستی، به orandapp.ir@gmail.com می‌رسه و فقط برای جواب دادن بهت ازش استفاده می‌کنیم.'],['سرویس‌های بیرونی','فونت‌ها از Google Fonts می‌یان، پس مرورگرت برای گرفتنشون به سرورهای گوگل وصل می‌شه. لینک‌های اینستاگرام، تلگرام و گیت‌هاب هم می‌رن سایت خودشون و اونا قوانین حریم خصوصی خودشون رو دارن. فایل اپ هم از گیت‌هاب دانلود می‌شه.'],['اپ‌های اورند','هر اپ صفحه‌ی حریم خصوصی مخصوص خودش رو داره، تو صفحه‌ی همون اپ: '+L+'.'],['اگه این متن عوض شد','همین‌جا به‌روزش می‌کنیم. سوالی بود به orandapp.ir@gmail.com بنویس.']];
  return doc(en?'Privacy':'حریم خصوصی',u('upd'),'',S,'<a class="lnk bk" href="#top">'+AR+u('home')+'</a>')}
 function nf(){const en=r.lang==='en';return '<div class="vw"><h2>'+(en?'Page not found.':'این صفحه پیدا نشد.')+'</h2><p class="p" style="margin:12px 0 24px">'+(en?'The link may be wrong or the page may have moved.':'شاید لینک اشتباهه یا صفحه جابه‌جا شده.')+'</p><a class="btn bk" href="#top">'+AR+u('home')+'</a></div>'}
 /* language */
@@ -420,7 +418,7 @@ const P=[['درباره','About'],['حجم','Size'],['مسیر','Process'],['ا�
 ['ما اورندیم، یه استودیوی کوچیک که اپ می‌سازه. اپ‌هایی ساده و جمع‌وجور، که با حوصله ساخته شدن.','We\'re Orand, a small studio that makes apps. Simple, compact apps, built with patience.'],
 ['اپ‌هایی که دوست داری باز کنی.','Apps you\'ll want to open.'],['اورند یعنی شکوه و فر. باور ما اینه که شکوه یه اپ از سادگی و جزئیاتش میاد، نه از شلوغی.','Orand means splendor and glory. We believe an app\'s splendor comes from its simplicity and its details, not from clutter.'],
 ['یه نگاه به حافظه‌ت.','A look at your storage.'],['ما سبک بودن رو جدی می‌گیریم. ببین یه اپ سنگین چقدر جا می‌گیره و یه اپ اورندی چقدر.','We take being light seriously. See how much space a heavy app takes compared to an Orand app.'],
-['یه اپ شلوغ و پرتبلیغ','A cluttered, ad-heavy app'],['یه اپ اورندی','An Orand app'],['۱۸۰ مگابایت','180 MB'],['زیر ۱۰۰ مگابایت','Under 100 MB'],['عددها فقط یه مثال تصویری‌ان، برای نشون دادن فرق رویکرد.','These numbers are only an illustration of the difference in approach.'],['دوباره نشونم بده','Show me again'],
+['یه اپ شلوغ و پرتبلیغ','A cluttered, ad-heavy app'],['یه اپ اورندی','An Orand app'],['۱۸۰ مگابایت','180 MB'],['زیر ۵۰ مگابایت','Under 50 MB'],['عددها فقط یه مثال تصویری‌ان، برای نشون دادن فرق رویکرد.','These numbers are only an illustration of the difference in approach.'],['دوباره نشونم بده','Show me again'],
 ['اپ ما چطوری ساخته می‌شه؟','How do we build an app?'],['چهار قدم ساده، از ایده تا گوشی تو.','Four simple steps, from idea to your phone.'],['۱','1'],['۲','2'],['۳','3'],['۴','4'],['ایده','Idea'],['طراحی','Design'],['ساخت','Build'],['انتشار','Release'],
 ['یه مشکل کوچیک و واقعی رو پیدا می‌کنیم.','We find a small, real problem.'],['فقط چیزی که لازمه می‌مونه، بقیه حذف می‌شه.','Only what\'s needed stays; the rest goes.'],['سبک و تمیز می‌نویسیمش، بدون بار اضافه.','We write it light and clean, with no extra weight.'],['می‌ذاریمش دست تو و با نظرت بهترش می‌کنیم.','We put it in your hands and improve it with your feedback.'],
 ['اپ‌های اورند','Orand apps'],['اولین اپ‌ها در راهن. به‌زودی اینجا می‌بینیشون.','The first apps are on the way. You\'ll see them here soon.'],['به‌زودی','Soon'],
@@ -462,7 +460,7 @@ if(r.dataset.theme==='light')document.querySelector('meta[name=theme-color]').co
 /* faq: one open at a time */
 document.querySelectorAll('.faq details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)document.querySelectorAll('.faq details').forEach(o=>{if(o!==d)o.open=false})}));
 /* contact form -> email */
-document.getElementById('fm').addEventListener('submit',e=>{e.preventDefault();const n=document.getElementById('fn').value.trim(),t=document.getElementById('ft').value.trim();location.href='mailto:hello@orandapp.ir?subject='+encodeURIComponent((r.lang==='en'?'Message from Orand site - ':'پیام از سایت اورند - ')+n)+'&body='+encodeURIComponent(t+'\n\n— '+n);document.getElementById('sent').textContent=(r.lang==='en'?'Your email app opened. Just hit send.':'برنامه ایمیلت باز شد. فقط کافیه ارسال رو بزنی.')});
+document.getElementById('fm').addEventListener('submit',e=>{e.preventDefault();const n=document.getElementById('fn').value.trim(),t=document.getElementById('ft').value.trim();location.href='mailto:orandapp.ir@gmail.com?subject='+encodeURIComponent((r.lang==='en'?'Message from Orand site - ':'پیام از سایت اورند - ')+n)+'&body='+encodeURIComponent(t+'\n\n— '+n);document.getElementById('sent').textContent=(r.lang==='en'?'Your email app opened. Just hit send.':'برنامه ایمیلت باز شد. فقط کافیه ارسال رو بزنی.')});
 </script>
 </body>
 </html>
